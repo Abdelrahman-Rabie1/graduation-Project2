@@ -16,7 +16,9 @@ supabase: Client = create_client(supabase_url, supabase_key) if supabase_url and
 
 app = FastAPI(title="Banha National University - Colleges API")
 
-
+@app.get("/")
+async def root():
+    return {"message": "API is live! Visit /docs for interactive Swagger UI."}
 #############   Home Page  ############
 
 @app.get("/home", response_model=HomeScreen)
