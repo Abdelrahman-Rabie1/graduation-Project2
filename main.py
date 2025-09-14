@@ -148,7 +148,7 @@ async def get_college(college_id: str,
     else:
         raise HTTPException(
             status_code=404,
-            detail="College not found")
+            detail="Enter valid credentials")
     
 
 @app.get("/grants", response_model=GrantsScreen)
